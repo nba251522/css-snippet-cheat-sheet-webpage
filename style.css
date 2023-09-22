@@ -10,6 +10,11 @@
     white-space: pre; 
 }
 
+.flex-column-snippet .flex-column-content::before {
+    content: ".flex-column {\A    display: flex;\A    flex-direction: column;\A    align-items: center;\A}";
+    white-space: pre; 
+}
+
 .flex-row {
     display: flex;
     justify-content: space-between;
@@ -23,11 +28,12 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 .grid {
-    display: flex;
-    flex-direction: column;  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 2rem;
 }
@@ -36,7 +42,7 @@ body {
     background-color: var(--primary-bg);
     padding: 1rem;
     border-radius: 8px;
-    height: calc(2 * (100% / 6)); 
+    height: calc(2 * (100% / 6));
     transition: transform 0.3s ease-in-out;
 }
 
@@ -51,21 +57,20 @@ body {
     transform: scale(1.05);
 }
 
-.snippet {
+.snippet, .flex-column-content {
     user-select: all;
     white-space: pre-wrap;
-    /* background-color: var(--primary-bg);   */
     padding: 1rem;
     border-radius: 4px;
     color: var(--text-color);
     outline: none;
     box-sizing: border-box;
     border: 5px dashed red;
-    background-color: purple;
+    background-color: purple; /* You can uncomment this if you want the purple color without the gradient */
     background-image: linear-gradient(purple, yellow);
 }
 
-.snippet:focus {
+.snippet:focus, .flex-column-content:focus {
     background-color: var(--highlight-color);
 }
 
