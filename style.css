@@ -43,6 +43,8 @@ body {
 .box h2 {
     color: var(--text-color);
     margin-top: 0; 
+    border: 2px solid white;
+    border-radius: 25px;
 }
 
 .box:hover {
@@ -52,11 +54,15 @@ body {
 .snippet {
     user-select: all;
     white-space: pre-wrap;
-    background-color: var(--primary-bg);  
+    /* background-color: var(--primary-bg);   */
     padding: 1rem;
     border-radius: 4px;
     color: var(--text-color);
     outline: none;
+    box-sizing: border-box;
+    border: 5px dashed red;
+    background-color: purple;
+    background-image: linear-gradient(purple, yellow);
 }
 
 .snippet:focus {
