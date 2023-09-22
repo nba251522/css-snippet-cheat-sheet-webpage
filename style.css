@@ -5,6 +5,17 @@
     --highlight-color: #333;  
 }
 
+.flex-row-snippet .snippet::before {
+    content: ".flex-row {\A    display: flex;\A    justify-content: space-between;\A    align-items: center;\A}";
+    white-space: pre; 
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 body {
     background-color: var(--webpage-bg);
     color: var(--text-color);
